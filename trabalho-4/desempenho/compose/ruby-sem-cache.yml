@@ -1,0 +1,33 @@
+# Ruby sem Redis + PHP web
+version: "3.8"
+
+services:
+  api:
+    image: linkextractor-api:t4-ruby-nocache
+    build: ../api-ruby-sem-cache
+    ports:
+      - "4567:4567"
+  web:
+    image: linkextractor-web:t4-php-ruby
+    build: ../../linkextractor-master/step6/www
+    ports:
+      - "80:80"
+    environment:
+      - API_ENDPOINT=http://api:4567/api/
+    depends_on:
+      - api
+  locust:
+    image: locustio/locust:2.29.0
+    ports:
+      - "8089:8089"
+    volumes:
+      - ../locust:/mnt/locust
+      - ../resultados:/mnt/locust/resultados
+    environment:
+      - LOCUST_MODE=api
+      - API_PREFIX=/api/
+    depends_on:
+      - api
+    command: >
+      -f /mnt/locust/locustfile.py
+      --host=http://api:4567

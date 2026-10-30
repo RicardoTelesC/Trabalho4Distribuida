@@ -1,0 +1,98 @@
+[
+  {
+    "cenario": "python-com-cache",
+    "usuarios": 5,
+    "stats_csv": "C:\\Users\\RICARDO\\Desktop\\Distribuida\\Trabalho4\\desempenho\\resultados\\python-com-cache\\users_5\\run_stats.csv",
+    "duracao_s": 90,
+    "linguagem": "python",
+    "cache": "com"
+  },
+  {
+    "cenario": "python-com-cache",
+    "usuarios": 15,
+    "stats_csv": "C:\\Users\\RICARDO\\Desktop\\Distribuida\\Trabalho4\\desempenho\\resultados\\python-com-cache\\users_15\\run_stats.csv",
+    "duracao_s": 90,
+    "linguagem": "python",
+    "cache": "com"
+  },
+  {
+    "cenario": "python-com-cache",
+    "usuarios": 40,
+    "stats_csv": "C:\\Users\\RICARDO\\Desktop\\Distribuida\\Trabalho4\\desempenho\\resultados\\python-com-cache\\users_40\\run_stats.csv",
+    "duracao_s": 90,
+    "linguagem": "python",
+    "cache": "com"
+  },
+  {
+    "cenario": "python-sem-cache",
+    "usuarios": 5,
+    "stats_csv": "C:\\Users\\RICARDO\\Desktop\\Distribuida\\Trabalho4\\desempenho\\resultados\\python-sem-cache\\users_5\\run_stats.csv",
+    "duracao_s": 90,
+    "linguagem": "python",
+    "cache": "sem"
+  },
+  {
+    "cenario": "python-sem-cache",
+    "usuarios": 15,
+    "stats_csv": "C:\\Users\\RICARDO\\Desktop\\Distribuida\\Trabalho4\\desempenho\\resultados\\python-sem-cache\\users_15\\run_stats.csv",
+    "duracao_s": 90,
+    "linguagem": "python",
+    "cache": "sem"
+  },
+  {
+    "cenario": "python-sem-cache",
+    "usuarios": 40,
+    "stats_csv": "C:\\Users\\RICARDO\\Desktop\\Distribuida\\Trabalho4\\desempenho\\resultados\\python-sem-cache\\users_40\\run_stats.csv",
+    "duracao_s": 90,
+    "linguagem": "python",
+    "cache": "sem"
+  },
+  {
+    "cenario": "ruby-com-cache",
+    "usuarios": 5,
+    "stats_csv": "C:\\Users\\RICARDO\\Desktop\\Distribuida\\Trabalho4\\desempenho\\resultados\\ruby-com-cache\\users_5\\run_stats.csv",
+    "duracao_s": 90,
+    "linguagem": "ruby",
+    "cache": "com"
+  },
+  {
+    "cenario": "ruby-com-cache",
+    "usuarios": 15,
+    "stats_csv": "C:\\Users\\RICARDO\\Desktop\\Distribuida\\Trabalho4\\desempenho\\resultados\\ruby-com-cache\\users_15\\run_stats.csv",
+    "duracao_s": 90,
+    "linguagem": "ruby",
+    "cache": "com"
+  },
+  {
+    "cenario": "ruby-com-cache",
+    "usuarios": 40,
+    "stats_csv": "C:\\Users\\RICARDO\\Desktop\\Distribuida\\Trabalho4\\desempenho\\resultados\\ruby-com-cache\\users_40\\run_stats.csv",
+    "duracao_s": 90,
+    "linguagem": "ruby",
+    "cache": "com"
+  },
+  {
+    "cenario": "ruby-sem-cache",
+    "usuarios": 5,
+    "stats_csv": "C:\\Users\\RICARDO\\Desktop\\Distribuida\\Trabalho4\\desempenho\\resultados\\ruby-sem-cache\\users_5\\run_stats.csv",
+    "duracao_s": 90,
+    "linguagem": "ruby",
+    "cache": "sem"
+  },
+  {
+    "cenario": "ruby-sem-cache",
+    "usuarios": 15,
+    "stats_csv": "C:\\Users\\RICARDO\\Desktop\\Distribuida\\Trabalho4\\desempenho\\resultados\\ruby-sem-cache\\users_15\\run_stats.csv",
+    "duracao_s": 90,
+    "linguagem": "ruby",
+    "cache": "sem"
+  },
+  {
+    "cenario": "ruby-sem-cache",
+    "usuarios": 40,
+    "stats_csv": "C:\\Users\\RICARDO\\Desktop\\Distribuida\\Trabalho4\\desempenho\\resultados\\ruby-sem-cache\\users_40\\run_stats.csv",
+    "duracao_s": 90,
+    "linguagem": "ruby",
+    "cache": "sem"
+  }
+]

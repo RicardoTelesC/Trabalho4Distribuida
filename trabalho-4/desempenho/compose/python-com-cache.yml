@@ -1,0 +1,39 @@
+# Python (step5) + Redis + PHP web
+version: "3.8"
+
+services:
+  api:
+    image: linkextractor-api:t4-python-cache
+    build: ../../linkextractor-master/step5/api
+    ports:
+      - "5000:5000"
+    environment:
+      - REDIS_URL=redis://redis:6379
+    depends_on:
+      - redis
+  web:
+    image: linkextractor-web:t4-php
+    build: ../../linkextractor-master/step5/www
+    ports:
+      - "80:80"
+    environment:
+      - API_ENDPOINT=http://api:5000/api/
+    depends_on:
+      - api
+  redis:
+    image: redis:7-alpine
+  locust:
+    image: locustio/locust:2.29.0
+    ports:
+      - "8089:8089"
+    volumes:
+      - ../locust:/mnt/locust
+      - ../resultados:/mnt/locust/resultados
+    environment:
+      - LOCUST_MODE=api
+      - API_PREFIX=/api/
+    depends_on:
+      - api
+    command: >
+      -f /mnt/locust/locustfile.py
+      --host=http://api:5000

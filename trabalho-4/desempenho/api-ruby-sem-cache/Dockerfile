@@ -1,0 +1,9 @@
+FROM       ruby:2.6
+LABEL      maintainer="Trabalho4"
+ENV        LANG C.UTF-8
+WORKDIR    /app
+COPY       Gemfile /app/
+RUN        bundle install
+COPY       linkextractor.rb /app/
+RUN        chmod a+x linkextractor.rb
+CMD        ["./linkextractor.rb", "-o", "0.0.0.0"]

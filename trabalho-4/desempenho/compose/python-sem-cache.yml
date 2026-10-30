@@ -1,0 +1,33 @@
+# Python (step4 API, sem Redis) + PHP web
+version: "3.8"
+
+services:
+  api:
+    image: linkextractor-api:t4-python-nocache
+    build: ../../linkextractor-master/step4/api
+    ports:
+      - "5000:5000"
+  web:
+    image: linkextractor-web:t4-php
+    build: ../../linkextractor-master/step5/www
+    ports:
+      - "80:80"
+    environment:
+      - API_ENDPOINT=http://api:5000/api/
+    depends_on:
+      - api
+  locust:
+    image: locustio/locust:2.29.0
+    ports:
+      - "8089:8089"
+    volumes:
+      - ../locust:/mnt/locust
+      - ../resultados:/mnt/locust/resultados
+    environment:
+      - LOCUST_MODE=api
+      - API_PREFIX=/api/
+    depends_on:
+      - api
+    command: >
+      -f /mnt/locust/locustfile.py
+      --host=http://api:5000
